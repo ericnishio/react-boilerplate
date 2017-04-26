@@ -7,9 +7,11 @@ import Hello from '../../hello/components/Hello'
 import css from './Root.css'
 
 export type RootProps = {
+  /** The Redux store. */
   store: Object,
 }
 
+/** The root component of the application. */
 const Root = ({store}: RootProps) => (
   <div className={css.component}>
     <Provider store={store}>

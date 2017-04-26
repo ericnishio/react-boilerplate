@@ -1,0 +1,6 @@
+@import '../../styles/typography.css';
+
+.component {
+  font-family: var(--font-serif);
+  font-size: rem(36px);
+}

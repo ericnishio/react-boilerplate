@@ -5,13 +5,17 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {sayHello} from '../actions'
 import {helloSelector} from '../selectors'
+import Title from './Title'
 import css from './Hello.css'
 
 type HelloProps = {
+  /** A message that is displayed to the user. */
   message: string,
+  /** A function that is invoked when the component will be mounted. */
   sayHello: typeof sayHello
 }
 
+/** A component that displays a friendly message to the user. */
 export class Hello extends Component {
   props: HelloProps
 
@@ -28,7 +32,7 @@ export class Hello extends Component {
 
     return (
       <div className={css.component}>
-        <h1 className={css.title}>{message}</h1>
+        <Title>{message}</Title>
       </div>
     )
   }
